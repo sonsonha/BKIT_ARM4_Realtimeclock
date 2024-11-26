@@ -1,0 +1,17 @@
+    while (!flag_timer2); // Wait for timer
+    flag_timer2 = 0;
+
+    button_Scan();
+    handle_buttons();
+
+    switch (current_mode) {
+        case MODE_VIEW:
+            handle_view_mode();
+            break;
+        case MODE_ADJUST:
+            handle_adjust_mode();
+            break;
+        case MODE_ALARM:
+            handle_alarm_mode();
+            break;
+    }
